@@ -1,3 +1,47 @@
 <app-child [messageFromParent]="messageToChild" (messageEvent)="recieveMessage($event)"></app-child>
+
+<!-- String Interpolation -->
 <p>{{messageFromChild}}</p>
 <p>{{message}}</p>
+
+<!-- Property Binding -->
+<img [src]="imageUrl" alt="image">
+
+<!-- Class Binding -->
+<h3 [class.success-color]="isSuccess">Success</h3>
+
+<!-- Style Binding -->
+<h3 [style.color]="isFailed ? 'red': ''">Failed</h3>
+
+<!-- Event Binding -->
+<button (click)="clickButton()">Click Me</button>
+
+<br>
+<br>
+
+<input type="text" (keyup.enter)="showEnteredData(username.value)" #username>
+
+<br>
+<br>
+
+<!-- One Way Data Binding [ Binds Data from component to view(html)] -->
+<input type="text" [value]="inputText" (keyup.enter)="showData()">
+
+<br>
+<br>
+
+<!-- Two Way Data Binding [ Binds Data from component to view(html) and viceversa] -->
+<input type="text" [(ngModel)]="inputText" (keyup.enter)="showData()">
+
+
+<!-- 
+    --- ONE WAY DATA BINDING ---
+        1. String Interpolation
+        2. Property Binding
+        3. Class Binding
+        4. Style Binding
+
+    --- TWO WAY DATA BINDING ---
+        1. [(ngModel)]
+
+ -->

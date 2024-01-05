@@ -12,6 +12,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
   messageToChild: string = "Hello Child";
   messageFromChild!: string;
   message!: string;
+  inputText: string = "Default Text"
+
+  isSuccess: boolean = true;
+  isFailed: boolean = true;
+
+  imageUrl: string = "https://burst.shopifycdn.com/photos/a-drop-of-pink-and-yellow-paint-in-water.jpg?width=300&format=pjpg&exif=0&iptc=0";
 
   recieveMessage($event: string): void {
     console.log($event);
@@ -29,6 +35,18 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     console.log(this.childComponent);
     this.messageFromChild = this.childComponent.messageToParent;
+  }
+
+  clickButton(): void {
+    console.log("Button Clicked");
+  }
+
+  showEnteredData(username: string): void {
+    console.log(username);
+  }
+
+  showData(): void {
+    console.log(this.inputText);
   }
   
 }

@@ -20,6 +20,7 @@ export class ChildComponent implements OnInit {
   }
 
   constructor() {}
+  
   ngOnInit(): void {
     
   }
