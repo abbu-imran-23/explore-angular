@@ -12,6 +12,7 @@ export class RegisterComponent implements OnInit {
   registerForm!: FormGroup;
 
   users: Array<User> = [];
+  cityName: string = "Bangalore";
 
   constructor(private formBuilder: FormBuilder) {}
 

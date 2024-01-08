@@ -19,9 +19,14 @@
         <th>Phone</th>
     </tr>
     <tr *ngFor="let user of users">
-        <td>{{ user.firstName }}</td>
-        <td>{{ user.lastName }}</td>
+        <td>{{ user.firstName | uppercase }}</td>
+        <td>{{ user.lastName | lowercase }}</td>
         <td>{{ user.email }}</td>
         <td>{{ user.phone }}</td>
     </tr>
 </table>
+
+<br><br>
+
+<h4>{{ cityName | append}}</h4>
+<h4>{{ cityName | appendCli }}</h4>

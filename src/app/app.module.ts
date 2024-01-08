@@ -10,6 +10,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ChildComponent } from './components/child/child.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { AppendPipe } from './pipes/append.pipe';
+import { AppendCliPipe } from './pipes/append-cli.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { RegisterComponent } from './pages/register/register.component';
     HomeComponent,
     DashboardComponent,
     ChildComponent,
-    RegisterComponent
+    RegisterComponent,
+    AppendPipe,
+    AppendCliPipe
   ],
   imports: [
     BrowserModule,
