@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { ChildComponent } from './components/child/child.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { AppendPipe } from './pipes/append.pipe';
 import { AppendCliPipe } from './pipes/append-cli.pipe';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -29,9 +31,12 @@ import { AppendCliPipe } from './pipes/append-cli.pipe';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
